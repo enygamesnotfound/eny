@@ -1,0 +1,47 @@
+/*per primo definiree le due variabili(dare il valore),
+il terzo numero corrisponde all'operazione, di conseguenza:
+1=addizione(+)
+2=sottrazione(-)
+3=moltiplicazione(*)
+4=divisione(/)
+*/
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+    printf("\ndai un valore alla prima variabile: ");
+    // variabili
+    int a; // primo numero
+    int b; // secondo nuero
+    int c; // numero che corrisponde alle operazioni
+    // aggiungere un valore alle variabili a e b
+    scanf("%d", &a);
+    printf("\ndai un valore alla seconda variabile: ");
+    scanf("%i", &b);
+    printf("\ninfine dai un valore a questa variabile che sarà l'operazione: ");
+    scanf("%d", &c);
+    // c=operzioni che si vuole fare
+    switch (c) {
+    // addizione
+    case 1:
+        printf("\nla somma dei due numeri è %d", a + b);
+        break;
+    // sottrazione
+    case 2:
+        printf("\nla differenza tra i due numeri è %d", a - b);
+        break;
+    // moltiplicazione
+    case 3:
+        printf("la %d", a * b);
+        break;
+    // divisione
+    case 4:
+        printf("%d", a / b);
+        break;
+    // se il numero non è tra quelli elencati, il programma si stoppa e stampa questa scritta
+    default:
+        printf("\n\nil numero che hai digitato non corrisponde a nessuna operazione,\nperfavore riprova con un altro "
+               "numero compreso tra 1-5");
+        break;
+    }
+}
